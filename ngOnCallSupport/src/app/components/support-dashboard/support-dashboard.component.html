@@ -1,3 +1,10 @@
-<p>
-  support-dashboard works!
-</p>
+<h3>IT TEAMS</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let team of teams" class="col-1-4"
+      routerLink="/detail/{{team.teamId}}">
+    <div class="module team">
+      <h4>{{team.teamName}}</h4>
+      <h4>{{team.employeeName}}</h4>
+    </div>
+  </a>
+</div>

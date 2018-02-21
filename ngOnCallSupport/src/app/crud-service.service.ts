@@ -1,25 +1,27 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+
 @Injectable()
 export class CrudServiceService {
 
   constructor(private http:Http) { }
 
   public getOnCallSnapshot(){
-    var sampleJson = {
-      "onCallList" : [{
+    var sampleJson =
+      [{
       "teamId" : "scrumBucket",
       "teamName" : "Scrum Bucket",
       "employeeId" : "smukunda",
-      "employeeName" : "Satish Mukundachar"
+      "employeeName" : "Satish Mukundachar",
+      "logoUrl":""
     },{
       "teamId" : "storesTeam",
       "teamName" : "Stores Team",
       "employeeId" : "nrevanap",
-      "employeeName" : "Nagaraja Revanappa"
+      "employeeName" : "Nagaraja Revanappa",
+      "logoUrl":""
     }]
-    }
     return sampleJson;
   }
 
