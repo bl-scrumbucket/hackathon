@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Employee } from '../../dataObjects/employee';
+
+import {CrudServiceService} from '../../crud-service.service';
 
 @Component({
   selector: 'app-on-call-emp-detail',
@@ -6,10 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./on-call-emp-detail.component.css']
 })
 export class OnCallEmpDetailComponent implements OnInit {
-
-  constructor() { }
+  emp: Employee;
+  constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService) { }
 
   ngOnInit() {
+    this.emp = this.getEmployee();
   }
 
+  getEmployee(): Employee {
+    const teamId = this.route.snapshot.paramMap.get('teamId');
+    return this.crudServiceService.getOnCallInfoForTeam(teamId);
+  }
 }

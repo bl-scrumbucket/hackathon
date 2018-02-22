@@ -1,5 +1,15 @@
-<h1 style="text-align:center;">{{title}}</h1>
-<nav>
-  <a routerLink="/support-dashboard">Dashboard</a>
-</nav>
-<router-outlet></router-outlet>
+
+
+
+<div class="divTable" style="border: 2px solid #000;" >
+  <div class="divTableBody">
+  <div class="divTableRow">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="divTableRow">
+  <div class="divTableCell"><a routerLink="/support-dashboard" style="text-align-last: left;">Dashboard</a></div>
+  <div class="divTableCell">Add OnCall</div>
+  <div class="divTableCell">Call</div>
+  </div>
+  </div>
+  </div>
