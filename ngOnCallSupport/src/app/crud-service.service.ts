@@ -28,7 +28,7 @@ export class CrudServiceService {
   }
 
   public searchEmployee(lastNameOfEmployee:string){
-    return this.http.get('./assets/data/searchEmployee.json');
+    return this.http.get('http://hnwvd-omemail01:5000/search/'+lastNameOfEmployee);
 
 
     //return this.http.get('https://uhfxxujepg.execute-api.us-east-1.amazonaws.com/dev/heroes/'+lastNameOfEmployee);

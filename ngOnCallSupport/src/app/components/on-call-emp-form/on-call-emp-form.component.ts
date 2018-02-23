@@ -2,6 +2,15 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
+import { Observable } from 'rxjs/Observable';
+import { Subject }    from 'rxjs/Subject';
+import { of }         from 'rxjs/observable/of';
+
+import {
+   debounceTime, distinctUntilChanged, switchMap
+ } from 'rxjs/operators';
+
+
 import { Employee } from '../../dataObjects/employee';
 import { Team } from '../../dataObjects/team';
 
@@ -14,8 +23,21 @@ import {CrudServiceService} from '../../crud-service.service';
 })
 export class OnCallEmpFormComponent implements OnInit {
   @Input() emp: Employee;
-  teams: Team[] = [];
+  teams: Team[];
+  emps:Employee[];
+  selectedEmpId : string;
+  selectTeamId :string;
+
+  private searchTerms = new Subject<string>();
   constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location) { }
+
+  search(term: string) {
+   // this.searchTerms.next(term);
+    this.crudServiceService.searchEmployee(term).subscribe( teamsResponse => {
+   // console.log(teamsResponse.json());
+    this.emps = teamsResponse.json();
+    });
+  }
 
   ngOnInit() {
    this.getTeams();
