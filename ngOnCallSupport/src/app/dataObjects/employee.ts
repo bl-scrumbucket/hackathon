@@ -2,13 +2,15 @@
 
 export class Employee {
     constructor(
-        public id:string ="",
-        public firstName:string="",
-        public lastName:string="",
-        public phone:number=0,
-        public photoUrl:string="",
-        public teamId:string=""
-        //TODO : Talk to team if this will help
-        //public team:Team=new Team(),
+        public teamId:string ="",
+        public teamName:string="",
+        public employeeId:string="",
+        public employeeName:string="",
+        public employeePhone:string="",
+        public escalation1Name:string="",
+        public escalation1Phone:string="",
+        public escalation2Name:string="",
+        public escalation2Phone:string=""
+        
     ){}
 }
