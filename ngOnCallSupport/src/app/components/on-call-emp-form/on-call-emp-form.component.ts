@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { Employee } from '../../dataObjects/employee';
+import { Team } from '../../dataObjects/team';
+
+import {CrudServiceService} from '../../crud-service.service';
 
 @Component({
   selector: 'app-on-call-emp-form',
@@ -6,10 +13,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./on-call-emp-form.component.css']
 })
 export class OnCallEmpFormComponent implements OnInit {
-
-  constructor() { }
+  @Input() emp: Employee;
+  teams: Team[] = [];
+  constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location) { }
 
   ngOnInit() {
+    this.teams = this.getTeams();
+  }
+  getTeams(): Team[] {
+    console.log(this.crudServiceService.getOnCallSnapshot());
+    return this.crudServiceService.getOnCallSnapshot();
+ 
+  }
+  goBack(): void {
+    this.location.back();
   }
 
+ save(): void {
+  // this.crudServiceService.updateHero(this.emp)
+  //    .subscribe(() => this.goBack());
+  }
 }
