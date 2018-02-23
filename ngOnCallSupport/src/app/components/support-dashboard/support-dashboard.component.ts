@@ -17,8 +17,8 @@ export class SupportDashboardComponent implements OnInit {
     this.teams = this.getTeams();
   }
   getTeams(): Team[] {
-    console.log(this.crudServiceService.getOnCallSnapshot());
-    return this.crudServiceService.getOnCallSnapshot();
+    console.log(this.crudServiceService.getOnCallInfo());
+    return this.crudServiceService.getOnCallInfo();
  
   }
 }
