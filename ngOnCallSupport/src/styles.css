@@ -88,6 +88,10 @@ html {
     flex-basis: 46%;
     text-align: right;
 }
+.information-wrapper > .navigation-arrow > i{
+    background: url('/assets/images/arrow.svg');
+
+}
 #app {
     display: none;
 }
@@ -158,4 +162,92 @@ html {
     padding-top: 8px;
     font-size: 20px;
     padding-bottom: 20px;
+}
+.oncall-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-left: 2px;
+    padding-bottom:10px;
+    border-bottom:20px solid #f6f6f6;
+}
+.oncall-wrapper > .oncall-details-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+}
+.oncall-wrapper > .oncall-details-wrapper  > .oncall-image{
+    flex-basis: 25%;
+    text-align: center;
+}
+.oncall-wrapper > .oncall-details-wrapper  > .oncall-image > img{
+   width: 46.5px;
+   height: 45px;
+   
+}
+.oncall-wrapper > .oncall-phone-wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    padding-left: 10px;
+    padding-bottom: 0px;
+}
+.oncall-wrapper > .oncall-phone-wrapper > .oncall-phone{
+    flex-basis: 25%;
+}
+.edit-form-wrapper > form.edit-form{
+    margin-top: 20px;
+}
+.edit-form-wrapper > .edit-form-header{
+    background:#f6f6f6;
+}
+.edit-form-wrapper > form.edit-form > .form-group > .dropdown{
+    background:none;
+    border-right: 0px;
+    border-left:0px;
+    width:60%;
+    margin-left:20px;
+    border-top:0px;
+    border-bottom:1px solid #cccccc;
+    border-radius: 0px;
+}
+.edit-form-wrapper > .dateselected{
+  padding: 20px;
+}
+.edit-form-wrapper > .dateselected > .date-label{
+ color: #e77504;
+ display: block;
+ font-weight: 500;
+}
+.edit-form-wrapper > .dateselected > .day-text{
+    color: #e77504; 
+    display: inline-block;
+}
+.edit-form-wrapper > .dateselected > .date-text{
+    color: #e77504; 
+    display: inline-block;
+}
+.edit-form-wrapper > .dateselected > span{
+    color: #e77504; 
+}
+.edit-form-wrapper > form.edit-form > .form-group > label{
+    margin-left:20px;
+    font-weight: 400;
+    color:black;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 11px; 
+}
+.edit-form-wrapper > form.edit-form > .form-group > .employee-name{
+    background:none;
+    border-right: 0px;
+    border-left:0px;
+    width:60%;
+    margin-left:20px;
+    border-top:0px;
+    border-bottom:1px solid #cccccc;
+    border-radius: 0px;
+    box-shadow: none !important;
+    padding-left: 0px;
 }

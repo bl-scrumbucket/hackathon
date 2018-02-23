@@ -13,29 +13,62 @@
   
   </div>
   <router-outlet></router-outlet>
-  <div class="col-1-2">
-    <label>employeeName: {{emp.employeeName}}
-    
-    </label>
+  <div class="oncall-wrapper">
+    <div class="oncall-details-wrapper">
+        <div class="oncall-image">
+            <img src="http://via.placeholder.com/140x100" alt="">
+          </div>
+          <div class="oncall-details">
+             {{emp.employeeName}}
+          </div>
+    </div>
+<div class="oncall-phone-wrapper">
+  <div class="oncall-phone">
+    <span class="oncall-label">phone</span>
+    <span class="oncall-number">{{emp.employeePhone}}</span>
+
+    </div>  
+
+
   </div>
-  <div class="col-1-2">
-    <label>employeePhone: {{emp.employeePhone}}
-    </label>
+</div>
+<div class="oncall-wrapper">
+    <div class="oncall-details-wrapper">
+        <div class="oncall-image">
+            <img src="http://via.placeholder.com/140x100" alt="">
+          </div>
+          <div class="oncall-details">
+              {{emp.escalation1Name}}
+          </div>
+    </div>
+<div class="oncall-phone-wrapper">
+  <div class="oncall-phone">
+    <span class="oncall-label">phone</span>
+    <span class="oncall-number">{{emp.escalation1Phone}}</span>
+
+    </div>  
+
+
   </div>
-  <div class="col-1-2">
-    <label>escalation1Name: {{emp.escalation1Name}}
-    </label>
+</div>
+<div class="oncall-wrapper">
+    <div class="oncall-details-wrapper">
+        <div class="oncall-image">
+            <img src="http://via.placeholder.com/140x100" alt="">
+          </div>
+          <div class="oncall-details">
+              {{emp.escalation2Name}}
+          </div>
+    </div>
+<div class="oncall-phone-wrapper">
+  <div class="oncall-phone">
+    <span class="oncall-label">phone</span>
+    <span class="oncall-number">{{emp.escalation2Phone}}</span>
+
+    </div>  
+
+
   </div>
-  <div class="col-1-2">
-    <label>escalation1Phone: {{emp.escalation1Phone}}
-    </label>
-  </div>
-  <div class="col-1-2">
-    <label>escalation2Name: {{emp.escalation2Name}}
-    </label>
-  </div>
-  <div class="col-1-2">
-    <label>escalation2Phone: {{emp.escalation2Phone}}
-    </label>
-  </div>
+</div>
+ 
 </div>

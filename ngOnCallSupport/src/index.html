@@ -9,6 +9,10 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
   <script>
     function onReady(callback) {
     var intervalID = window.setInterval(checkReady, 2000);
@@ -29,6 +33,38 @@ onReady(function () {
     show('app', true);
     show('loading', false);
 });
+$(document).ready(function(){
+
+  var curr = new Date;
+var first = curr.getDate() - curr.getDay();
+var first = first + 1
+var last = first + 6;
+  var today = new Date();
+var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    var startday = days[1];
+    var endday = days[0];
+    var startdate = today.getDate() - today.getDay();
+    var startdate = startdate + 1;
+    var enddate = startdate +6;
+    if(dd<10) {
+        dd = '0'+dd
+    } 
+    
+    if(mm<10) {
+        mm = '0'+mm
+    } 
+    
+    today = mm + '/' + dd + '/' + yyyy; 
+    console.log(startday);
+  $('#day').html(startday)
+  $('#date').html(startdate);
+  $('#endday').html(endday);
+  $('#enddate').html(enddate);
+});
+
     </script>
 
   <div id="app">
@@ -39,3 +75,4 @@ onReady(function () {
 </body>
 </html>
 
+    

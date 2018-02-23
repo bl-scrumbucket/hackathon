@@ -7,7 +7,7 @@ export class CrudServiceService {
 
   constructor(private http:Http) { }
 
-  public getOnCallSnapshot(){
+  public getOnCallInfo(){
     var sampleJson =
       [{
       "teamId" : "scrumBucket",
