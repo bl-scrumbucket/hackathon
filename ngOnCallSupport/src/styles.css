@@ -20,9 +20,12 @@ html {
   }
   .timeperiod{
     padding: 10px;
-    background: #ddd;
+    background: #f0f7ff;;
     padding-bottom: 1px;
     margin-bottom: 10px;
+  }
+  .timeperiod > p{
+      color: #1c75bc;
   }
   .container{
       padding: 0;
@@ -99,17 +102,17 @@ html {
     display: none;
 }
 #loading {
-    display: block;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 100;
+    z-index: 999999;
     width: 100%;
     height: 100%;
     background-color: rgba(192, 192, 192, 0.5);
-    background-image: url("http://localhost:4200/assets/images/loading_screen.png");
+    background-image: url(http://localhost:4200/assets/images/loading_screen.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    max-width: 100%;
+    background-size: 100%;
 }
 
   .footer {
@@ -117,7 +120,7 @@ html {
     bottom: 0;
     width: 100%;
     height: 60px;
-    background-color: #dddddd;
+    background-color: #f6f6f6;
     z-index: 999999;
   }
   
@@ -127,11 +130,28 @@ html {
       justify-content: center;
       align-content: center;
   }
+  .footer > .footer-items-wrapper > .teams-link{
+      display: block;
+      font-size: 10px;
+      color:#E77504;
+  }
+  .footer > .footer-items-wrapper >.teams-wrapper > div > .teams-link{
+    display: block;
+    font-size: 10px;
+    color:#E77504;
+}
   .footer > .footer-items-wrapper > div{
       flex-basis: 33.33%;
+      padding-top: 10px;
+      text-align: center;
   }
   .oncall-details-wrapper > .details-header{
      background: #f6f6f6;
+  }
+  .oncall-details-wrapper > .details-header > img{
+    display: block;
+    margin: auto;
+
   }
   .details-nav-edit {
       display: flex;
@@ -173,6 +193,7 @@ html {
     padding-left: 2px;
     padding-bottom:10px;
     border-bottom:20px solid #f6f6f6;
+    padding-right: 0px;
 }
 .oncall-wrapper > .oncall-details-wrapper {
     display: flex;
@@ -195,9 +216,23 @@ html {
     padding: 20px;
     padding-left: 10px;
     padding-bottom: 0px;
+    padding-right: 0px;
 }
 .oncall-wrapper > .oncall-phone-wrapper > .oncall-phone{
-    flex-basis: 25%;
+    flex-basis: 50%;
+}
+.oncall-wrapper > .oncall-phone-wrapper > .oncall-phone > .oncall-label{
+    display: block;
+    color:#0079FF;
+}
+.oncall-wrapper > .oncall-phone-wrapper >.oncall-tools{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.oncall-wrapper > .oncall-phone-wrapper >.oncall-tools > div{
+    flex-basis: 22%;
 }
 .edit-form-wrapper > form.edit-form{
     margin-top: 20px;
