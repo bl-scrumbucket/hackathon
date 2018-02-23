@@ -14,11 +14,23 @@ export class OnCallEmpDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService) { }
 
   ngOnInit() {
-    this.emp = this.getEmployee();
+    try {
+      this.getEmployee();
+    }catch(e){
+      alert("Sorry could not find the employee");
+    }
   }
 
-  getEmployee(): Employee {
+  getEmployee() {
     const teamId = this.route.snapshot.paramMap.get('teamId');
-    return this.crudServiceService.getOnCallInfoForTeam(teamId);
+    //return this.crudServiceService.getOnCallDetails(teamId);
+    this.crudServiceService.getOnCallDetails(teamId).subscribe(employee =>{
+      const employeeJson = employee.json();
+      console.log(employeeJson);
+      this.emp = employeeJson[0];
+      console.log(this.emp.employeeId);
+
+    });
+
   }
 }

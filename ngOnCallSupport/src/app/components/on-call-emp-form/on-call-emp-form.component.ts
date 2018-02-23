@@ -18,12 +18,15 @@ export class OnCallEmpFormComponent implements OnInit {
   constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location) { }
 
   ngOnInit() {
-    this.teams = this.getTeams();
+   this.getTeams();
   }
-  getTeams(): Team[] {
+  getTeams() {
     console.log(this.crudServiceService.getOnCallInfo());
-    return this.crudServiceService.getOnCallInfo();
- 
+    return this.crudServiceService.getOnCallInfo().subscribe( teamsResponse => {
+      console.log(teamsResponse.json());
+      this.teams = teamsResponse.json();
+      }
+    ); 
   }
   goBack(): void {
     this.location.back();
