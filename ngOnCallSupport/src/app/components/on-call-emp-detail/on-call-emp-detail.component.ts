@@ -22,7 +22,7 @@ export class OnCallEmpDetailComponent implements OnInit {
   }
 
   getEmployee() {
-    const teamId = this.route.snapshot.paramMap.get('teamId');
+    const teamId = this.route.snapshot.paramMap.get('id');
     //return this.crudServiceService.getOnCallDetails(teamId);
     this.crudServiceService.getOnCallDetails(teamId).subscribe(employee =>{
       const employeeJson = employee.json();
