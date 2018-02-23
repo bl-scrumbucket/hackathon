@@ -55,6 +55,9 @@ html {
 .information-wrapper > .image{
     flex-basis:25%;
 }
+.information-wrapper > .image > img{
+    max-width: 80%;
+}
 .information-wrapper > .image > span{
     height: 30px;
     width: 30px;
