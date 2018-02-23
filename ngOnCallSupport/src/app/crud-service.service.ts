@@ -28,18 +28,8 @@ export class CrudServiceService {
   }
 
   public searchEmployee(lastNameOfEmployee:string){
-    var sampleJson = {
-      "teamId" : "scrumBucket",
-      "teamName" : "Scrum Bucket",
-      "employeeId" : "smukunda",
-      "employeeName" : "Satish Mukundachar",
-      "employeePhone" : "6142787271",
-      "escalation1Name" : "Doug Coning",
-      "escalation1Phone" : "612786757",
-      "escalation2Name" : "Ananda Jami",
-      "escalation2Phone" : "6142781234"
-    }
-    return sampleJson;
+    return this.http.get('./assets/data/searchEmployee.json');
+
 
     //return this.http.get('https://uhfxxujepg.execute-api.us-east-1.amazonaws.com/dev/heroes/'+lastNameOfEmployee);
   }
