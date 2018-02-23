@@ -1,6 +1,18 @@
-<div *ngIf="emp">
-  <h2>{{ emp.teamName | uppercase }} Details</h2>
+<div *ngIf="emp" class="oncall-details-wrapper">
+  <div class="details-header">
+    <div class="details-nav-edit">
+       <div class="teams">
+         <i></i><a routerLink="/support-dashboard">Teams</a>
+       </div>
+       <div class="edit">
+         <a routerLink="/empForm">Edit</a>
+       </div>
+    </div>
+    <span class="team-logo">?</span> 
+    <span class="team-name">{{ emp.teamName | uppercase }}  </span>
   
+  </div>
+  <router-outlet></router-outlet>
   <div class="col-1-2">
     <label>employeeName: {{emp.employeeName}}
     
