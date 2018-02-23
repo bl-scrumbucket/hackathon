@@ -9,7 +9,7 @@
         <li class="list-group-item" *ngFor="let team of teams" routerLink="/detail/{{team.employeeId}}">
           <div class="information-wrapper">
                <div class="image">
-                <span>?</span>
+                <img src="{{team.logoUrl}}" alt="">
                </div>
                <div class="description">
                 <span class="teamname">{{team.teamName}}</span>
