@@ -14,11 +14,19 @@ export class SupportDashboardComponent implements OnInit {
   constructor(private crudServiceService: CrudServiceService) { }
 
   ngOnInit() {
-    this.teams = this.getTeams();
+    try {
+      this.getTeams();
+    }catch(e){
+      alert("Sorry could not find any teams");
+    }
   }
-  getTeams(): Team[] {
-    console.log(this.crudServiceService.getOnCallSnapshot());
-    return this.crudServiceService.getOnCallSnapshot();
+
+  getTeams() {
+    return this.crudServiceService.getOnCallInfo().subscribe( teamsResponse => {
+        console.log(teamsResponse.json());
+        this.teams = teamsResponse.json();
+      }
+    );
  
   }
 }
