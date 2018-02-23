@@ -26,7 +26,6 @@ export class OnCallEmpFormComponent implements OnInit {
   teams: Team[];
   emps:Employee[];
   selectedEmpId : string;
-
   selectTeamId :string;
 
   private searchTerms = new Subject<string>();
