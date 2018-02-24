@@ -56,12 +56,20 @@ export class OnCallEmpFormComponent implements OnInit {
   }
 
  save(): void {
-  // this.crudServiceService.updateHero(this.emp)
-  //    .subscribe(() => this.goBack());
+   this.crudServiceService.addOnCall(this.selectedEmpId,this.selectTeamId).subscribe(
+     addOnCallResponse => {
+       console.log(addOnCallResponse.json());
+     }
+   );
   }
 
   setSelectedEmployee(employeedId:string){
     console.log("Employee ID : "+employeedId);
     this.selectedEmpId = employeedId;
   }
+
+  onSelect(teamId:string) { 
+    console.log("Team ID : "+teamId);
+    this.selectTeamId = teamId;
+}
 }

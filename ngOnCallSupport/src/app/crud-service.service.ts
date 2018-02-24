@@ -19,12 +19,14 @@ export class CrudServiceService {
     //return this.http.get('./assets/data/onCallDetails.json');
   }
 
-  public addOnCall(employee:Employee){
+  public addOnCall(employeeId:string,teamId:string){
     var requestJson = {
-      teamId : employee.teamId,
-      employeeId : employee.employeeId,
+      "teamId" : teamId,
+      "employeeId" : employeeId,
     }
-    return this.http.put('https://uhfxxujepg.execute-api.us-east-1.amazonaws.com/dev/heroes/'+employee.teamId,requestJson);
+    console.log("Making addOnCall with json : "+ JSON.stringify(requestJson)) ;
+    //return this.http.put('https://uhfxxujepg.execute-api.us-east-1.amazonaws.com/dev/heroes/'+employeeId,requestJson);
+    return this.http.get('./assets/data/addOnCall.json');
   }
 
   public searchEmployee(lastNameOfEmployee:string){

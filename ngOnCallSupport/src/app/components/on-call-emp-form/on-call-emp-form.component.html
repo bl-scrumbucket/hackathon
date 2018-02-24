@@ -24,11 +24,14 @@
 </div>
 <form class="edit-form">
         <div class="form-group">
-              <select name="dropdown" id="dropDown" class="dropdown" ng-model="selectedTeam">
-                <option *ngFor="let team of teams" value="{{team.teamName}}">
+              <select name="dropdown" id="dropDown" class="dropdown"
+                      (change)="onSelect($event.target.value)"
+                      [(ngModel)]="selectTeamId">
+                <option *ngFor="let team of teams" value="{{team.teamId}}">
                     {{team.teamName}}
                 </option>
               </select>
+
             </div>
               <div class="form-group">
                   <label for="employeeName">Associate Name</label>
