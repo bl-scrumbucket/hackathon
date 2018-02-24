@@ -32,6 +32,7 @@ export class OnCallEmpFormComponent implements OnInit {
   constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location) { }
 
   search(term: string) {
+    console.log("term : "+term);
    // this.searchTerms.next(term);
     this.crudServiceService.searchEmployee(term).subscribe( teamsResponse => {
    // console.log(teamsResponse.json());
@@ -57,5 +58,10 @@ export class OnCallEmpFormComponent implements OnInit {
  save(): void {
   // this.crudServiceService.updateHero(this.emp)
   //    .subscribe(() => this.goBack());
+  }
+
+  setSelectedEmployee(employeedId:string){
+    console.log("Employee ID : "+employeedId);
+    this.selectedEmpId = employeedId;
   }
 }
