@@ -41,6 +41,7 @@ var first = first + 1
 var last = first + 6;
   var today = new Date();
 var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
     var yyyy = today.getFullYear();
@@ -49,6 +50,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
     var startdate = today.getDate() - today.getDay();
     var startdate = startdate + 1;
     var enddate = startdate +6;
+    var month = months[today.getMonth()]
     if(dd<10) {
         dd = '0'+dd
     } 
@@ -63,6 +65,7 @@ var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'S
   $('#date').html(startdate);
   $('#endday').html(endday);
   $('#enddate').html(enddate);
+  $('#month').html(month);
 });
 
     </script>
