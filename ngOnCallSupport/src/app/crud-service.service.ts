@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Employee } from './dataObjects/employee';
+import { RequestOptions } from '@angular/http/src/base_request_options';
 
 
 @Injectable()
 export class CrudServiceService {
 
-  constructor(private http:Http) { }
+  constructor(private http:Http, private httpclient:HttpClient) { }
 
   public getOnCallInfo(){
     return this.http.get('http://hnwvd-omemail01:5000/teams');
@@ -22,11 +24,10 @@ export class CrudServiceService {
   public addOnCall(employeeId:string,teamId:string){
     var requestJson = {
       "teamId" : teamId,
-      "employeeId" : employeeId,
+      "employeeId" : employeeId
     }
     console.log("Making addOnCall with json : "+ JSON.stringify(requestJson)) ;
-    //return this.http.put('https://uhfxxujepg.execute-api.us-east-1.amazonaws.com/dev/heroes/'+employeeId,requestJson);
-    return this.http.get('./assets/data/addOnCall.json');
+    return this.http.post('http://hnwvd-omemail01:5000/updateOncall/'+employeeId+'/'+teamId,JSON.stringify(requestJson));
   }
 
   public searchEmployee(lastNameOfEmployee:string){
