@@ -8,12 +8,6 @@ html {
    
     margin-bottom: 60px;
   }
-  .header{
-      padding-left: 20px;
-      padding-top: 60px;
-      padding-bottom:10px;
-      padding-right:0px; 
-  }
   .header > h3{
       margin: 0 !important;
       text-align: left !important;
@@ -135,15 +129,32 @@ html {
       font-size: 10px;
       color:#E77504;
   }
+  .footer > .footer-items-wrapper >.teams-wrapper > div,   .footer > .footer-items-wrapper >.calendar-wrapper > div,   .footer > .footer-items-wrapper >.calls-wrapper > div{
+      line-height: 0.5;
+      margin-top: 2px;
+  }
   .footer > .footer-items-wrapper >.teams-wrapper > div > .teams-link{
     display: block;
     font-size: 10px;
+    color:#a9a9a9;
+}
+.footer > .footer-items-wrapper >.calendar-wrapper > div > a, .footer > .footer-items-wrapper >.calls-wrapper > div > a{
+    display: block;
+    font-size: 10px;
+    color:#a9a9a9;
+}
+.footer > .footer-items-wrapper >.teams-wrapper > div.active >a, .footer > .footer-items-wrapper >.calendar-wrapper > div.active >a {
     color:#E77504;
+    text-decoration: none;
 }
   .footer > .footer-items-wrapper > div{
       flex-basis: 33.33%;
       padding-top: 10px;
       text-align: center;
+  }
+  .footer > .footer-items-wrapper > div.active > svg path{
+
+          fill:#E77504;
   }
   .oncall-details-wrapper > .details-header{
      background: #f6f6f6;

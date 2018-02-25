@@ -10,6 +10,7 @@ import { SupportDashboardComponent } from './components/support-dashboard/suppor
 import { OnCallEmpDetailComponent } from './components/on-call-emp-detail/on-call-emp-detail.component';
 import { OnCallEmpFormComponent } from './components/on-call-emp-form/on-call-emp-form.component';
 import { CrudServiceService }          from './crud-service.service';
+import { CalendarComponent } from './components/calendar/calendar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CrudServiceService }          from './crud-service.service';
     AppComponent,
     SupportDashboardComponent,
     OnCallEmpDetailComponent,
-    OnCallEmpFormComponent
+    OnCallEmpFormComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,

@@ -50,7 +50,7 @@ var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
     var startdate = today.getDate() - today.getDay();
     var startdate = startdate + 1;
     var enddate = startdate +6;
-    var month = months[today.getMonth()]
+    var month = months[today.getMonth()];
     if(dd<10) {
         dd = '0'+dd
     } 
@@ -66,6 +66,7 @@ var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'A
   $('#endday').html(endday);
   $('#enddate').html(enddate);
   $('#month').html(month);
+  $('#calendarmonth').html(month);
 });
 
     </script>

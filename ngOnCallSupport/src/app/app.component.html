@@ -1,13 +1,13 @@
 <nav class="footer">
   
   <div class="footer-items-wrapper">
-      <div class="teams-wrapper">
+      <div class="teams-wrapper" routerLinkActive="active">
           
-          <svg version="1.1" id="Layer_1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg routerLink="/support-dashboard" version="1.1" id="Layer_1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 96 64" enable-background="new 0 0 296 64" xml:space="preserve">
        <g id="Friends_Icon_Group_-_Active_5_">
-         <rect id="Tab_Bar_Icon_Frame_9_" opacity="0" fill="#E77504" width="96" height="64"/>
-         <path id="Friends_Icon_-_Active_5_" fill="#E77504" d="M52.5,32c0-4.7-1.4-9.1-3.8-12.7c-4-6.2-11-10.4-19-10.4
+         <rect id="Tab_Bar_Icon_Frame_9_" opacity="0" fill="#929292" width="96" height="64"/>
+         <path id="Friends_Icon_-_Active_5_" fill="#929292" d="M52.5,32c0-4.7-1.4-9.1-3.8-12.7c-4-6.2-11-10.4-19-10.4
            c-2.4,0-4.8,0.4-7,1.1C13.3,12.9,6.5,21.7,6.5,32c0,12.7,10.3,23,23,23c6.2,0,11.8-2.5,16-6.4c0,0,0.1,0,0.1,0
            c3.1-2.9,5.2-6.6,6.2-10.8C52.2,36,52.5,34,52.5,32z M29.5,52.9c-5.7,0-10.9-2.3-14.7-6.1c0.3-0.1,0.6-0.1,0.9-0.2
            c2.8-0.1,4.9-0.8,7.4-1.2c1-0.2,1.8-0.5,2.1-1.5c0.2-0.7,0.4-1.9-0.2-2.4c-0.4-0.3-1.3-0.3-1.7-0.4c-1.4-0.4-3.2-1-3.9-2.3
@@ -25,14 +25,15 @@
            c0.1,0,1.9,0.5,3.8,1.1C77.5,50.5,72.2,52.9,66.5,52.9z"/>
        </g>
        </svg>
-       <div>
+       
+       <div routerLinkActive="active">
           <a class="teams-link" routerLink="/support-dashboard">Teams</a>
        </div>
        
       </div>
-      <div>
+      <div class="calendar-wrapper" routerLinkActive="active">
           
-          <svg version="1.1" id="Layer_1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg routerLink="/calendar" version="1.1" id="Layer_1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 96 64" enable-background="new 0 0 296 64" xml:space="preserve">
        <g id="Calendar_Icon_Group_-_Inactive_5_">
          <rect id="Tab_Bar_Icon_Frame_10_" x="-0.9" y="0.2" opacity="0" fill="#929292" width="96" height="64"/>
@@ -44,11 +45,12 @@
            c0,2.2-1.8,4-4,4c-2.2,0-4-1.8-4-4v-6h-24v6c0,2.2-1.8,4-4,4s-4-1.8-4-4v-6h-4v44h48v-44H66.1z M68.1,54.2h-44v-30h44V54.2z"/>
        </g>
        </svg>
-       <div>
-          <a class="teams-link" routerLink="/support-dashboard">Calendar</a>
+       
+       <div routerLinkActive="active">
+          <a class="teams-link" routerLink="/calendar">Calendar</a>
        </div>
       </div>
-      <div>
+      <div class="calls-wrapper">
          
           <svg version="1.1" id="Layer_1" width="40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 87 57" enable-background="new 0 0 287 57" xml:space="preserve">
@@ -63,7 +65,8 @@
          c-4.1-4-6.4-7.2-7.1-8.4c0.9-1.4,1.7-2.8,2.5-4.3c0.4-0.9,1.1-1.9,0.9-3c-0.1-0.8-0.6-1.7-1-2.5c-0.9-1.8-2-3.5-3.1-5.2
          c-1-1.5-2-3-3.2-4.4C14.6,3,14,2,13.2,1.6C12.5,1.1,11.7,0.9,11,1.1z"/>
        </svg>
-       <div>
+      
+       <div routerLinkActive="active">
           <a class="teams-link" routerLink="/support-dashboard">Calls</a>
        </div>
       </div>
