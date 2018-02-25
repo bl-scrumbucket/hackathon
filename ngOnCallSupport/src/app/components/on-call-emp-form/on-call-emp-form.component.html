@@ -113,12 +113,12 @@
             </div>
               <div class="form-group">
                   <label for="employeeName">Associate Name</label>
-                  <input #searchBox  (keyup)="search(searchBox.value)" required minlength="3" maxlength="10"   id="employeeName" type="text" class="form-control employee-name">   
+                  <input #searchBox  (keydown.enter)="search(searchBox.value)" required minlength="3" maxlength="10"   id="employeeName" type="text" class="form-control employee-name">   
                   </div>   
 
-                  <ul class="search-result">
-                    <li *ngFor="let emp of emps">
-                      <span class="badge" (click)="setSelectedEmployee(emp.employeeId)">{{emp.employeeId}}</span>{{emp.employeeName}}
+                  <ul class="search-results">
+                    <li *ngFor="let emp of emps" class="associate-name">
+                      <span (click)="setSelectedEmployee(emp.employeeId)">{{emp.employeeId}}</span>{{emp.employeeName}}
                     </li>
                   </ul>
 
