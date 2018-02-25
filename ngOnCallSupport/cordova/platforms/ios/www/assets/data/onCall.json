@@ -1,0 +1,14 @@
+[{
+"teamId" : "scrumBucket",
+"teamName" : "Scrum Bucket",
+"employeeId" : "smukunda",
+"employeeName" : "Satish Mukundachar",
+"employeeFirstName" : "Satish",
+"logoUrl":""
+},{
+"teamId" : "storesTeam",
+"teamName" : "Stores Team",
+"employeeId" : "nrevanap",
+"employeeName" : "Nagaraja Revanappa",
+"logoUrl":""
+}]
