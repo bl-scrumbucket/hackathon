@@ -11,6 +11,7 @@ import { OnCallEmpDetailComponent } from './components/on-call-emp-detail/on-cal
 import { OnCallEmpFormComponent } from './components/on-call-emp-form/on-call-emp-form.component';
 import { CrudServiceService }          from './crud-service.service';
 import { CalendarComponent } from './components/calendar/calendar.component';
+import { CallsComponent } from './components/calls/calls.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CalendarComponent } from './components/calendar/calendar.component';
     SupportDashboardComponent,
     OnCallEmpDetailComponent,
     OnCallEmpFormComponent,
-    CalendarComponent
+    CalendarComponent,
+    CallsComponent
   ],
   imports: [
     BrowserModule,

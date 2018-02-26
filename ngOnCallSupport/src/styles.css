@@ -143,7 +143,7 @@ html {
     font-size: 10px;
     color:#a9a9a9;
 }
-.footer > .footer-items-wrapper >.teams-wrapper > div.active >a, .footer > .footer-items-wrapper >.calendar-wrapper > div.active >a {
+.footer > .footer-items-wrapper >.teams-wrapper > div.active >a, .footer > .footer-items-wrapper >.calendar-wrapper > div.active >a, .footer-items-wrapper >.calls-wrapper > div.active >a {
     color:#E77504;
     text-decoration: none;
 }
