@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Observable } from 'rxjs/Observable';
@@ -29,7 +29,7 @@ export class OnCallEmpFormComponent implements OnInit {
   selectTeamId :string;
 
   private searchTerms = new Subject<string>();
-  constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location) { }
+  constructor(private route: ActivatedRoute, private crudServiceService: CrudServiceService, private location: Location, private router: Router) { }
 
   search(term: string) {
     console.log("term : "+term);
@@ -58,7 +58,9 @@ export class OnCallEmpFormComponent implements OnInit {
  save(): void {
    this.crudServiceService.addOnCall(this.selectedEmpId,this.selectTeamId).subscribe(
      addOnCallResponse => {
-       //console.log(addOnCallResponse.json());
+       var statusString = new String(addOnCallResponse).toString();
+       this.router.navigate(['/']);
+       console.log(statusString);
      }
    );
   }
