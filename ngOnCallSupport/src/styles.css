@@ -263,6 +263,7 @@ html {
 }
 .edit-form-wrapper > .dateselected{
   padding: 20px;
+  border-bottom: 1px solid #dddddd;
 }
 .edit-form-wrapper > .dateselected > .date-label{
  color: #e77504;

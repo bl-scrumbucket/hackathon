@@ -1,3 +1,25 @@
 .edit-form > search-results{
     list-style-type: none;
 }
+
+.search-results-wrapper{
+    display: block;
+    padding-top: 20px;
+}
+.search-results-wrapper > .results-header{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: #dddddd;
+}
+.search-results-wrapper > ul{
+    list-style-type: none;
+    padding-left: 0px
+}
+.search-results-wrapper > ul > li{
+    padding-left: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-left: 20px;
+    padding-top: 10px;
+}
