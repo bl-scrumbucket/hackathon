@@ -115,10 +115,10 @@
                   <label for="employeeName">Associate Name</label>
                   <input #searchBox  (keydown.enter)="search(searchBox.value)" required minlength="3" maxlength="20"   id="employeeName" type="text" class="form-control employee-name">   
                   </div>   
-
-                  <ul class="search-results">
+                
+                  <ul *ngIf="searchBox.value" class="search-results">
                     <li *ngFor="let emp of emps" class="associate-name">
-                      <span (click)="setSelectedEmployee(emp.employeeId)">{{emp.employeeId}}</span>{{emp.employeeName}}
+                      <span (click)="setSelectedEmployee(emp.employeeId)" id="{{emp.employeeId}}">{{emp.employeeName}}</span>
                     </li>
                   </ul>
 
